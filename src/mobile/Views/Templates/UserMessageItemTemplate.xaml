@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<Grid
+    x:Class="MauiChat.Views.Templates.UserMessageItemTemplate"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:MauiChat.Models"
+    x:DataType="model:Message"
+    xmlns:stateButton="clr-namespace:IeuanWalker.Maui.StateButton;assembly=IeuanWalker.Maui.StateButton"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"           
+    RowDefinitions="Auto">
+
+
+    <Grid ColumnDefinitions="*, Auto, 30" ColumnSpacing="5"
+          Margin="0,0,20,0" x:Name="borderText">
+
+        <Label 
+            VerticalOptions="End" HorizontalOptions="End"
+            Opacity="0.4" FontSize="11"
+            Text="{Binding MessageTime, StringFormat='{0:HH:mm}'}"  
+            TextColor="{AppThemeBinding Light={StaticResource QuinaryDark},
+                                        Dark={StaticResource TertiaryLight}}"/>
+
+
+
+        <stateButton:StateButton  Grid.Column="1" 
+                    Padding="10,10"
+                    BackgroundColor="#ECEEED"
+                    SemanticProperties.Description="asd">
+            <stateButton:StateButton.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </stateButton:StateButton.StrokeShape>
+            <stateButton:StateButton.Shadow>
+                <Shadow Brush="Gray"
+                             Opacity="0.3"
+                             Radius="10"
+                             Offset="0,0" />
+            </stateButton:StateButton.Shadow>
+
+            <Grid RowDefinitions="*">
+
+                <Label  
+                    VerticalTextAlignment="End" HorizontalOptions="End"
+                    Text="{Binding Text}"
+                    TextColor="Black" />
+            </Grid>
+        </stateButton:StateButton>
+
+
+        <toolkit:AvatarView Grid.Column="2"
+            VerticalOptions="EndAndExpand" 
+            WidthRequest="30" HeightRequest="30"
+            ImageSource="https://play-lh.googleusercontent.com/i1qvljmS0nE43vtDhNKeGYtNlujcFxq72WAsyD2htUHOac57Z9Oiew0FrpGKlEehOvo=w240-h480-rw" />
+    </Grid>
+
+</Grid>

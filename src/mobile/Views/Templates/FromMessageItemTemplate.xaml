@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<Grid
+    x:Class="MauiChat.Views.Templates.FromMessageItemTemplate"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:MauiChat.Models"
+    x:DataType="model:Message"
+    xmlns:stateButton="clr-namespace:IeuanWalker.Maui.StateButton;assembly=IeuanWalker.Maui.StateButton"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"           
+    RowDefinitions="Auto">
+
+    <Grid ColumnDefinitions="30, Auto, *" 
+          ColumnSpacing="5" 
+          x:Name="borderText">
+
+        <toolkit:AvatarView 
+            VerticalOptions="End" 
+            WidthRequest="30" HeightRequest="30"
+            ImageSource="https://image.lexica.art/full_jpg/7515495b-982d-44d2-9931-5a8bbbf27532" />
+
+
+        <stateButton:StateButton  Grid.Column="1" 
+                Padding="10,10"
+                BackgroundColor="#ECEEED"
+                SemanticProperties.Description="asd">
+            <stateButton:StateButton.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </stateButton:StateButton.StrokeShape>
+            <stateButton:StateButton.Shadow>
+                <Shadow Brush="Gray"
+                         Opacity="0.3"
+                         Radius="10"
+                         Offset="0,0" />
+            </stateButton:StateButton.Shadow>
+
+            <Label 
+                    Text="{Binding Text}"
+                    TextColor="Black"  />
+        </stateButton:StateButton>
+
+
+        <Label Grid.Column="2"
+            VerticalOptions="End" HorizontalOptions="Start"
+            Opacity="0.4" FontSize="11"
+            TextColor="{AppThemeBinding Light={StaticResource QuinaryDark},
+                                        Dark={StaticResource TertiaryLight}}"
+            Text="{Binding MessageTime, StringFormat='{0:HH:mm}'}"  />
+
+    </Grid>
+
+</Grid>

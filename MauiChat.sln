@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiChat", "src\mobile\MauiChat.csproj", "{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E7D88D1-03E6-4C4F-8CE6-0E126A89B957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mobile", "mobile", "{31E380AA-8F76-4916-BD87-C9E7F6E9EBE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{9BB0F781-DB24-4D45-8F26-4CF1AEB7AB68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "signalr", "signalr", "{060E4239-BD4E-4620-BD44-DAC7021B3AB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR", "src\web\SignalR\SignalR.csproj", "{740C0EA1-9EF1-44E4-944D-86392F596CBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{740C0EA1-9EF1-44E4-944D-86392F596CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740C0EA1-9EF1-44E4-944D-86392F596CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740C0EA1-9EF1-44E4-944D-86392F596CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740C0EA1-9EF1-44E4-944D-86392F596CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0361AFF-A33E-4A84-B0B1-364D355C5BFB} = {31E380AA-8F76-4916-BD87-C9E7F6E9EBE8}
+		{31E380AA-8F76-4916-BD87-C9E7F6E9EBE8} = {1E7D88D1-03E6-4C4F-8CE6-0E126A89B957}
+		{9BB0F781-DB24-4D45-8F26-4CF1AEB7AB68} = {1E7D88D1-03E6-4C4F-8CE6-0E126A89B957}
+		{060E4239-BD4E-4620-BD44-DAC7021B3AB0} = {9BB0F781-DB24-4D45-8F26-4CF1AEB7AB68}
+		{740C0EA1-9EF1-44E4-944D-86392F596CBB} = {060E4239-BD4E-4620-BD44-DAC7021B3AB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
