@@ -1,4 +1,4 @@
-# MauiChat
+# Real-time messaging with .NET Maui & SignalR
 
 Light        |  Dark
 :-------------------------:|:-------------------------:
